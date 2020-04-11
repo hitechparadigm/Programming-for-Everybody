@@ -1,0 +1,4 @@
+ccc = dict()
+ccc[book1] = 1
+ccc[book2] = 1
+print(ccc)
