@@ -4,6 +4,7 @@
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+
 import ssl
 
 # Ignore SSL certificate errors
