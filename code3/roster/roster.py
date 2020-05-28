@@ -25,7 +25,8 @@ CREATE TABLE Member (
     course_id   INTEGER,
     role        INTEGER,
     PRIMARY KEY (user_id, course_id)
-)
+);
+
 ''')
 
 fname = input('Enter file name: ')
@@ -61,3 +62,7 @@ for entry in json_data:
         ( user_id, course_id ) )
 
     conn.commit()
+
+    info = cur.execute(''' SELECT User.name, Course.title from Member JOIN User JOIN Course ON Member.user_id = User.id AND Member.course_id = Course.id ''')
+
+    print(info)

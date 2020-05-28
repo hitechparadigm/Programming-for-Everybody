@@ -5,8 +5,7 @@ cur = conn.cursor()
 
 cur.execute('DROP TABLE IF EXISTS Counts')
 
-cur.execute('''
-CREATE TABLE Counts (email TEXT, count INTEGER)''')
+cur.execute('''CREATE TABLE Counts (email TEXT, count INTEGER)''')
 
 fname = input('Enter file name: ')
 if (len(fname) < 1): fname = 'mbox-short.txt'
